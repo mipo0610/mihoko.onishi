@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+    crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Mihoko Onishi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* Timeline styles for Career section */
+      .timeline {
+        position: relative;
+        padding-left: 30px;
+        border-left: 3px solid #007bff;
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 30px;
+        padding-left: 40px;
+        max-width: 800px;
+        margin: 0 auto; /* Centrally align the items */
+      }
+
+      .timeline-icon {
+        position: absolute;
+        left: -27px;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .timeline-content {
+        background-color: white;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .timeline-icon i {
+        font-size: 24px;
+      }
+
+      /* Education section adjustments */
+      #education {
+        background-color: #f0f0f5; /* Softer light gray background */
+        color: #000;
+      }
+
+      /* History Section adjustments */
+      .card img {
+        max-height: 200px;
+        object-fit: cover;
+      }
+
+      /* Skills section styling */
+      .progress-bar {
+        height: 10px;
+        border-radius: 5px;
+      }
+
+      .progress-bar.programming {
+        background-color: #007bff;
+      }
+
+      .progress-bar.frameworks {
+        background-color: #28a745;
+      }
+
+      .progress-bar.design {
+        background-color: #dc3545;
+      }
+
+      .progress-bar.data-analysis {
+        background-color: #ffc107;
+      }
+
+      .progress-bar.web-development {
+        background-color: #17a2b8;
+      }
+
+      .progress-bar.version-control {
+        background-color: #6c757d;
+      }
+
+      /* Card hover effect */
+      .hover-shadow:hover {
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+      }
+
+      /* About Me background box */
+      .lead {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+    <!-- ヘッダー -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">HR Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#career">Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- 画面トップのカルーセル -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Image-main1.png" class="d-block w-100 img-fluid" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="Image-main2.png" class="d-block w-100 img-fluid" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="Image-main3.png" class="d-block w-100 img-fluid" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+<!-- 自己紹介セクション -->
+<section id="about" class="py-5 bg-light" style="background-image: url('background-pattern.png'); background-size: cover;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h1 class="mb-4">About Me</h1>
+        <!-- 写真の削除 -->
+        <p class="lead">20代〜30代は暗黒の時代。心身ともにボロボロで絶望的だった。人生山あり谷あり、いろいろな経験が肥やしになる。歳をとるのも悪くないなと最近思う。一人ひとりが自分らしさを大切に、輝ける社会を作りたい。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Career セクション -->
+<section id="career" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Career</h2>
+    <div class="timeline">
+      <!-- Career 1: Coaching Service -->
+      <div class="timeline-item">
+        <div class="timeline-icon bg-primary">
+          <i class="bx bxs-user-voice bx-md text-white"></i>
+        </div>
+        <div class="timeline-content">
+          <h5 class="mb-1">asubito 運営＆コーチ</h5>
+          <small class="text-muted">2024 - Present</small>
+          <p class="mt-2">asubitoは、自分らしい明日（asu）にワクワクしながら、心もからだも整った人々を支援するコーチングサービスを提供しています。</p>
+        </div>
+      </div>
+
+      <!-- Career 2: Finance & HR -->
+      <div class="timeline-item">
+        <div class="timeline-icon bg-success">
+          <i class="bx bxs-building-house bx-md text-white"></i>
+        </div>
+        <div class="timeline-content">
+          <h5 class="mb-1">株式会社インタートレード 人材開発室</h5>
+          <small class="text-muted">2006 - Present</small>
+          <p class="mt-2">決済や証券など金融全般のデジタル化をサポートし、社員のエンゲージメントを向上させる取り組みを実施。</p>
+        </div>
+      </div>
+
+      <!-- Career 3: Pharma & HR -->
+      <div class="timeline-item">
+        <div class="timeline-icon bg-info">
+          <i class="bx bxs-flask bx-md text-white"></i>
+        </div>
+        <div class="timeline-content">
+          <h5 class="mb-1">ノバルティス・ファーマ コーポレート人事部</h5>
+          <small class="text-muted">2005 - 2006</small>
+          <p class="mt-2">コーポレート人事として社員の異動とキャリアパスを支援し、企業文化の浸透をサポート。</p>
+        </div>
+      </div>
+
+      <!-- Career 4: IR & Corporate Planning -->
+      <div class="timeline-item">
+        <div class="timeline-icon bg-warning">
+          <i class="bx bxs-chart bx-md text-white"></i>
+        </div>
+        <div class="timeline-content">
+          <h5 class="mb-1">野村インベスター・リレーションズ株式会社 経営企画部</h5>
+          <small class="text-muted">2003 - 2005</small>
+          <p class="mt-2">IR業務と経営企画の領域で企業戦略の策定をサポート。投資家とのコミュニケーションを強化。</p>
+        </div>
+      </div>
+
+      <!-- Career 5: Banking & Asset Management -->
+      <div class="timeline-item">
+        <div class="timeline-icon bg-dark">
+          <i class="bx bxs-bank bx-md text-white"></i>
+        </div>
+        <div class="timeline-content">
+          <h5 class="mb-1">三菱UFJモルガン・スタンレー証券株式会社 資産運用部</h5>
+          <small class="text-muted">2000 - 2002</small>
+          <p class="mt-2">リテール営業部にて資産運用のアドバイザリー業務を行い、顧客のニーズに応じた投資提案を実施。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- タイムラインのスタイル -->
+<style>
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 3px solid #007bff;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 40px;
+  }
+
+  .timeline-icon {
+    position: absolute;
+    left: -27px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timeline-content {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #007bff;
+  }
+
+  .timeline-icon i {
+    font-size: 24px;
+  }
+</style>
+
+<!-- HR Skills セクション -->
+<section id="skills" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">HR Skills</h2>
+    <div class="row">
+      <!-- 採用・人材管理 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <div class="iconbox mb-3">
+              <i class="bx bx-user-plus bx-lg text-primary"></i>
+            </div>
+            <h5 class="card-title">採用・人材管理</h5>
+            <div class="progress">
+              <div class="progress-bar programming" style="width: 80%">80%</div>
+            </div>
+            <p class="mt-2">採用計画立案、候補者評価、オンボーディング、採用マーケティング</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 従業員エンゲージメント -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <div class="iconbox mb-3">
+              <i class="bx bx-group bx-lg text-success"></i>
+            </div>
+            <h5 class="card-title">従業員エンゲージメント</h5>
+            <div class="progress">
+              <div class="progress-bar frameworks" style="width: 70%">70%</div>
+            </div>
+            <p class="mt-2">社内サーベイ、コミュニケーション促進</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- パフォーマンス管理 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <div class="iconbox mb-3">
+              <i class="bx bx-bar-chart-alt-2 bx-lg text-danger"></i>
+            </div>
+            <h5 class="card-title">パフォーマンス管理</h5>
+            <div class="progress">
+              <div class="progress-bar design" style="width: 60%">60%</div>
+            </div>
+            <p class="mt-2">キャリア開発、業績評価</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 組織開発・教育 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <div class="iconbox mb-3">
+              <i class="bx bx-book-open bx-lg text-warning"></i>
+            </div>
+            <h5 class="card-title">組織開発・教育</h5>
+            <div class="progress">
+              <div class="progress-bar data-analysis" style="width: 75%">75%</div>
+            </div>
+            <p class="mt-2">トレーニングの企画・実行、リーダーシップ開発、組織風土改革</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 労務管理・コンプライアンス -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <div class="iconbox mb-3">
+              <i class="bx bx-shield-alt-2 bx-lg text-info"></i>
+            </div>
+            <h5 class="card-title">労務管理・コンプライアンス</h5>
+            <div class="progress">
+              <div class="progress-bar web-development" style="width: 90%">90%</div>
+            </div>
+            <p class="mt-2">労務管理、給与計算と社保管理、勤怠管理</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- HRテクノロジーの活用 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <div class="iconbox mb-3">
+              <i class="bx bx-cog bx-lg text-dark"></i>
+            </div>
+            <h5 class="card-title">HRテクノロジーの活用</h5>
+            <div class="progress">
+              <div class="progress-bar version-control" style="width: 85%">85%</div>
+            </div>
+            <p class="mt-2">採用業務効率化、データ分析</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- History セクション -->
+<section id="history" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">History</h2>
+    <div class="row justify-content-center">
+      
+      <!-- Card 1: 富士山のような人になりたい -->
+      <div class="col-md-4 col-sm-6 col-12 pt-5">
+        <div class="card h-100 shadow-sm hover-shadow">
+          <img src="1.png" class="card-img-top img-fluid" alt="富士山と雲が美しく広がる風景">
+          <div class="card-body">
+            <h5 class="card-title text-center">ありたい姿は富士山</h5>
+            <p class="card-text">物心ついたころには、いつもそこにあった富士山。凛としていて、どっしりしている。どんなときも、温かく見守ってくれる心強い存在。</p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="https://www.nikkan.co.jp/articles/view/00419157" class="btn btn-primary btn-lg">See details</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 2: 自由に憧れ北の大地へ -->
+      <div class="col-md-4 col-sm-6 col-12 pt-5">
+        <div class="card h-100 shadow-sm hover-shadow">
+          <img src="2.png" class="card-img-top img-fluid" alt="大自然の広がる北の大地の風景">
+          <div class="card-body">
+            <h5 class="card-title text-center">自由に憧れ北の大地へ</h5>
+            <p class="card-text">北の大地でバンカラ精神を学ぶ。自由と引き換えに厳しい現実も知る。何かを選ぶということは、何かを捨てること。志を大事にしたい。</p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="https://release.nikkei.co.jp/attach/657412/02_202306161429.pdf" class="btn btn-primary btn-lg">See details</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 3: 暗黒の時代 -->
+      <div class="col-md-4 col-sm-6 col-12 pt-5">
+        <div class="card h-100 shadow-sm hover-shadow">
+          <img src="3.png" class="card-img-top img-fluid" alt="暗黒の時代を象徴する荒れた風景">
+          <div class="card-body">
+            <h5 class="card-title text-center">暗黒の時代・・・</h5>
+            <p class="card-text">社会人になるも、ストレスから心身ともにボロボロに。闘病生活を続ける中で、自分らしさや希望を失っていく。あるがままの自分を受け止めることも大事。</p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="https://atopyrecording.org/story/mihoko/" class="btn btn-primary btn-lg">See details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: 経営視点を学びにグロービスへ -->
+      <div class="col-md-4 col-sm-6 col-12 pt-4">
+        <div class="card h-100 shadow-sm hover-shadow">
+          <img src="4.png" class="card-img-top img-fluid" alt="経営視点のイメージ">
+          <div class="card-body">
+            <h5 class="card-title text-center">経営視点を学びにグロービスへ</h5>
+            <p class="card-text">ボトムアップで組織変革を推進するも頓挫。経営視点を知りたいという思いと、コロナのタイミングで飛び込んだ。</p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="https://mba.globis.ac.jp/trial-class/lp/lp-6/?argument=iGzZScij&dmai=a65fd2b12b1664&utm_source=google_red_third_brand_sgp&utm_medium=cpc&gad_source=1&gbraid=0AAAAApm34v4ZfmY_lA8DNNSCHBrga6Xga&gclid=Cj0KCQjwi5q3BhCiARIsAJCfuZmFi4m1u2azwrxr-FQQ9MxQd0ik5ws59WIQmg2RNdwe3GWO47AAu3QaAsD1EALw_wcB" class="btn btn-primary">See details</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 5: コンパッションとの出会い -->
+      <div class="col-md-4 col-sm-6 col-12 pt-4">
+        <div class="card h-100 shadow-sm hover-shadow">
+          <img src="5.png" class="card-img-top img-fluid" alt="コンパッションのイメージ">
+          <div class="card-body">
+            <h5 class="card-title text-center">コンパッションとの出会い</h5>
+            <p class="card-text">仲間に接するように、自分にも思いやりをもって接しよう。大学院の研究で確信にかわる。自分らしく生きる術を身につけた。</p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="https://www.jstage.jst.go.jp/article/globis/2/0/2_4/_article/-char/ja?fbclid=IwY2xjawFUXTFleHRuA2FlbQIxMAABHQ6dtULH3iDsNMrwwLfvPzB9ilVDHWHJUxYJf12nSer1-NgnwCAtMvv35g_aem_JbA5cNX0wbD8z_XJkPIagQ" class="btn btn-primary">See details</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 6: 現場理解のためにTech0へ -->
+      <div class="col-md-4 col-sm-6 col-12 pt-4">
+        <div class="card h-100 shadow-sm hover-shadow">
+          <img src="6.png" class="card-img-top img-fluid" alt="Tech0のイメージ">
+          <div class="card-body">
+            <h5 class="card-title text-center">現場理解のためにTech0へ</h5>
+            <p class="card-text">IT企業の人事なのに、現場の仕事がわからないという恐怖。エンジニアの仕事理解のためのTech0へ。</p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="https://note.com/tech0/n/nc3e68f728630" class="btn btn-primary">See details</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    </div>
+  </div>
+</section>
+
+<!-- Hobbies セクション -->
+<section id="hobbies" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Hobbies</h2>
+    <div class="row">
+      <!-- Hobby 1: 旅行 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <div class="iconbox mb-3">
+              <i class="bx bx-map bx-lg text-primary"></i>
+            </div>
+            <h5 class="card-title">旅行</h5>
+            <p class="card-text">国内外問わず、フットワーク軽めです。学生時代はバックパッカーをしていました。47都道府県はほぼ制覇！残りの1つがどこか分からず。</p>
+          </div>
+        </div>
+      </div>
+      <!-- Hobby 2: お酒 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <div class="iconbox mb-3">
+              <i class="bx bx-wine bx-lg text-success"></i>
+            </div>
+            <h5 class="card-title">お酒</h5>
+            <p class="card-text">お酒も好きですが、みんなが開放感になる飲み会の雰囲気が好きです。</p>
+          </div>
+        </div>
+      </div>
+      <!-- Hobby 3: ゴルフ -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <div class="iconbox mb-3">
+              <i class="bx bx-flag bx-lg text-warning"></i>
+            </div>
+            <h5 class="card-title">ゴルフ</h5>
+            <p class="card-text">月1〜2ペースでラウンドしてます。ベスグロ106ですが、一進一退を繰り返しています。距離は飛ばず、詰めが甘い。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- フォーム修正 -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-md-8 mx-auto text-center">
+        <h6 class="text-primary">Contact</h6>
+        <h2>Please contact me if you have any questions.</h2>
+      </div>
+    </div>
+    <form action="your-action-url" method="POST" class="row g-3 justify-content-center">
+      <div class="col-md-5 col-12">
+        <input type="text" class="form-control" placeholder="Full Name" required>
+      </div>
+      <div class="col-md-5 col-12">
+        <input type="email" class="form-control" placeholder="Enter E-mail" required>
+      </div>
+      <div class="col-md-10 col-12">
+        <input type="text" class="form-control" placeholder="Enter Subject" required>
+      </div>
+      <div class="col-md-10 col-12">
+        <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Enter Message" required></textarea>
+      </div>
+      <div class="col-md-10 d-grid">
+        <button class="btn btn-primary btn-lg">Contact</button>
+      </div>
+    </form>
+  </div>
+</section>
